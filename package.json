@@ -1,0 +1,38 @@
+{
+  "name": "client_side",
+  "version": "1.0.0",
+  "description": "Client side for REST api",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irynabond/Add-a-client-side.git"
+  },
+  "author": "Iryna Bondarrenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irynabond/Add-a-client-side/issues"
+  },
+  "homepage": "https://github.com/irynabond/Add-a-client-side#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.8"
+  },
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "chai": "^3.4.1",
+    "chai-http": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-webpack": "^1.5.0",
+    "nov_23_client": "file:angular"
+  }
+}

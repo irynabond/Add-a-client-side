@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body data-ng-app="userApp">
+  <main data-ng-controller="countryController">
+    <h1>Enter the country which you visited</h1>
+    <p>Use the form below to submit a country, description, visited places and duration of days</p>
+    <form>
+      <input type="text" data-ng-model="country">
+      <input type="text" data-ng-model="places">
+      <input type="text" data-ng-model="duration">
+	  <input type="text" data-ng-model="description">
+      <button data-ng-click="submitCountry()">Submit</button>
+    </form>
+    <p>Country: {{country}}</p>
+    <p>Visited places: {{places}}</p>
+    <p>Duration of trip: {{duration}}</p>
+	<p>Description: {{description}}</p>
+  </main>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
