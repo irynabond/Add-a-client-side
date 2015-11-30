@@ -1,3 +1,1 @@
-Client Side basics
-=======================
-Bear clients
+Angular client side for single resource API
