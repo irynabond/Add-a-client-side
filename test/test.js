@@ -1,13 +1,15 @@
+'use strict';
+
 var chai = require('chai');
-var chaihttp = require('chai-http');
-chai.use(chaihttp);
+var chaiHttp = require('chai-http');
 var expect = chai.expect;
 var mongoose = require('mongoose');
-
-process.env.MONGOLAB_URI = 'mongodb://localhost/countries';
-
-require(__dirname + '/../server');
+var app = require(__dirname + '/../server');
 var Country = require(__dirname + '/../models/country');
+
+process.env.MONGOLAB_URL = 'mongodb://localhost/country_test';
+
+chai.use(chaiHttp);
 
 describe('country routes', function() {
   after(function(done) {

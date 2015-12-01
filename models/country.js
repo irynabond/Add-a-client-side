@@ -15,6 +15,3 @@ var countrySchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Country', countrySchema);
-
-var mongoose = require('mongoose');
-
