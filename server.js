@@ -6,7 +6,7 @@ var app = express();
 app.use(express.static(__dirname + '/build'));
 
 var routes = express.Router();
-mongoose.connect(process.env.MONGOLAB_URL || 'mongodb://localhost/user_dev');
+mongoose.connect(process.env.MONGOLAB_URL || 'mongodb://localhost/country');
 
 require('./routes/countries')(routes);
 app.use('/api', routes);

@@ -1,9 +1,10 @@
 var gulp = require('gulp');
-var mocha = require('gulp-mocha');
-var jshint = require('gulp-jshint');
 var webpack = require('webpack-stream');
 
-gulp.task('default', ['watch', 'build']);
+gulp.task('static:dev', function() {
+  gulp.src('app/**/*.html')
+  .pipe(gulp.dest('build/'));
+});
 
 gulp.task('webpack:dev', function() {
   return gulp.src('app/js/client.js')
@@ -14,14 +15,5 @@ gulp.task('webpack:dev', function() {
     }))
     .pipe(gulp.dest('build/'));
 });
-
-gulp.task('copy', function() {
-  return gulp.src('app/**/*.html')
-    .pipe(gulp.dest('build/'));
-});
-
-gulp.task('build', ['webpack:dev', 'copy']);
-
-gulp.task('watch', function() {
-  gulp.watch(['*.js',  'routes/*routes.js', 'models/*model.js', 'app/**/*.js']);
-});
+gulp.task('build:dev', ['webpack:dev', 'static:dev']);
+gulp.task('default', ['build:dev']);
