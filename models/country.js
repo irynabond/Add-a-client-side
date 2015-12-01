@@ -7,8 +7,7 @@ var countrySchema = new mongoose.Schema({
 		validator: function(value) {
 			Number.max = 365;
 			return value == 1;
-		},
-		message: "Please, enter correct duration"
+			}, message: "Please, enter correct duration"
 		}
 	},
 	description: String
